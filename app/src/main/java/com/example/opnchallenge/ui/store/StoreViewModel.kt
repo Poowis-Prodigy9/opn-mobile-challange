@@ -68,7 +68,6 @@ class StoreViewModel @Inject constructor(
         _uiState.update { it.copy(address = address) }
     }
 
-
     fun createOrder(onComplete: () -> Unit = {}) {
         viewModelScope.launch {
             _uiState.value.products?.let { products ->
