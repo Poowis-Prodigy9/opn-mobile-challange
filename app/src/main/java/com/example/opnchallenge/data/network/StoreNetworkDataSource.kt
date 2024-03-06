@@ -1,11 +1,13 @@
 package com.example.opnchallenge.data.network
 
+import com.example.opnchallenge.model.CreateOrderRequest
 import com.example.opnchallenge.model.Product
 import com.example.opnchallenge.model.Store
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
+import retrofit2.http.Body
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -24,4 +26,6 @@ class DefaultStoreApiService @Inject constructor() : NetworkDataSource {
 
     override suspend fun getStore(): Store = service.getStore()
     override suspend fun getProducts(): List<Product> = service.getProducts()
+    override suspend fun createOrder(@Body body: CreateOrderRequest) =
+        service.createOrder(body = body)
 }

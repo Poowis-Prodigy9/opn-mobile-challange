@@ -1,9 +1,9 @@
 package com.example.opnchallenge.di
 
+import com.example.opnchallenge.data.MockStoreRepository
 import com.example.opnchallenge.data.StoreRepository
 import com.example.opnchallenge.data.network.DefaultStoreApiService
 import com.example.opnchallenge.data.network.NetworkDataSource
-import com.example.opnchallenge.data.network.NetworkStoreRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -16,7 +16,7 @@ abstract class RepositoryModule {
 
     @Singleton
     @Binds
-    abstract fun bindTaskRepository(repository: NetworkStoreRepository): StoreRepository
+    abstract fun bindTaskRepository(repository: MockStoreRepository): StoreRepository
 }
 
 @Module

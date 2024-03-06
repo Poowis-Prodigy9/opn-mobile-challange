@@ -80,6 +80,7 @@ dependencies {
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("androidx.compose.material:material-icons-extended:1.6.2")
 }
 
 kapt {
